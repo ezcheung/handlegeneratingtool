@@ -22,6 +22,6 @@ App.view = function(ctrl){
   return m('div', {class:'default'}, [
       m('h1', ctrl.hgt),
       m('div'),
-      m('button', {onclick: ctrl.generate}, "Generate"),
+      m('button', {onclick: ctrl.generate}, "Hie, generate term!"),
     ])
 }
