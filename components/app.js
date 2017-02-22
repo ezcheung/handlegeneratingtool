@@ -11,7 +11,11 @@ App.controller = function(){
   ctrl.hgt = "Hannah Grace Taylor";
 
   ctrl.generate = function() {
-    ctrl.hgt = `${wordsH()} ${wordsG()} ${wordsT()}`;
+    return m.request({method: "GET", url: "/randomhgt"})
+    .then((resp) => {
+      console.log("resp: ", resp);
+      ctrl.hgt = resp.data.split(' ').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
+    });
   }
 }
 

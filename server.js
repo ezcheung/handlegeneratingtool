@@ -10,7 +10,7 @@ var wordsH = uniqueRandomArray(fs.readFileSync('./words/wordsH.txt', 'utf8').spl
 var wordsT = uniqueRandomArray(fs.readFileSync('./words/wordsT.txt', 'utf8').split('\n'));
 
 app.get('/randomhgt', function (req, res) {
-  res.send(`${wordsH()} ${wordsG()} ${wordsT()}`);
+  res.send({data: `${wordsH()} ${wordsG()} ${wordsT()}`});
 })
 
 app.get('/app-bundle.js',
