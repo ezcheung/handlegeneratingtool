@@ -1,7 +1,7 @@
 window.m = require('mithril');
 
-var Gumbo = require('./components/Gumbo');
+var App = require('./components/app');
 
 m.route(document.getElementById('app'), '/', {
-  '/': Gumbo,
+  '/': App,
 });
