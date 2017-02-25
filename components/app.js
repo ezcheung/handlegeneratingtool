@@ -19,9 +19,13 @@ App.controller = function(){
 }
 
 App.view = function(ctrl){
-  return m('div', {class:'default'}, [
-      m('h1', ctrl.hgt),
-      m('div'),
-      m('button', {onclick: ctrl.generate}, "Hie, generate term!"),
+  return m('div', {class:'default outer'}, [
+      m('div', {class: 'middle'}, [
+        m('div', {class: 'inner'}, [
+          m('h1', ctrl.hgt),
+          m('div'),
+          m('button', {onclick: ctrl.generate}, "Hastily, Generate Term!"),
+        ])
+      ])
     ])
 }

@@ -1,4 +1,6 @@
 {
+  "title": "HGT",
+  "author": "Elliot Cheung",
   "scripts": {
     "start": "node server.js"
   },
